@@ -15,10 +15,10 @@ export class TodoComponent implements OnInit {
   todos: Todo[];
   constructor() {
     this.todos = [
-      {task: "Wash Dishes", completed: false},
-      {task: "Throw Out Trash", completed: true},
-      {task: "Groceries", completed: true}, 
-      {task: "Vitamins", completed: false}
+      { task: "Wash Dishes", completed: false },
+      { task: "Throw Out Trash", completed: true },
+      { task: "Groceries", completed: true },
+      { task: "Vitamins", completed: false }
     ]
   }
 

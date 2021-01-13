@@ -1,19 +1,27 @@
-<section class="todo">
-    <div class="screen">
-        <h1>To-Do List</h1>
-        <p>A place to share your to-dos</p>
-        <input id ="filter" type= "text" placeholder="Filter to-do">
-        <ol>
-            <li *ngFor="let todo of todos">
-                <button id="complete" *ngIf="!todo.completed" type="button"Complete!</button>
-            <span [ngClass]="{strikethrough: todo.completed}">{{todo.task}}</span>
-            <button id="x" type="button">X</button>
-            </li>
-        </ol>
-        <input id="addtolist" type="text" placeholder="Add to-do">
-        <button id="add" type="button">Add</button>
-    </div>
-</section>
+<main>
+  <section>
+    <h1>To-Do List</h1>
+    <p>A place to share your to-do tasks</p>
+    <form>
+      <input id="filter" type="text" placeholder="Filter to-do" />
+    </form>
+    <ol>
+      <li *ngFor="let todo of todos">
+        <button id="complete" *ngIf="!todo.completed" type="button">
+          Complete!
+        </button>
+        <span [ngClass]="{ strikethrough: todo.completed }">{{
+          todo.task
+        }}</span>
+        <button id="x" type="button">X</button>
+      </li>
+    </ol>
+    <form>
+      <input id="addtolist" type="text" placeholder="Add to-do" />
+      <button id="add" type="button">Add</button>
+    </form>
+  </section>
+</main>
 
 <!-- Note this isn't going to work because the TS file doesn't have Pt2 -->
 <!-- It only shows Lab 1 work, this HTML shows Lab 1 & 2 -->
