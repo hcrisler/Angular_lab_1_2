@@ -12,6 +12,7 @@ interface Todo {
 })
 
 export class TodoComponent implements OnInit {
+  newTodoTask: string;
   todos: Todo[];
   constructor() {
     this.todos = [
@@ -24,12 +25,15 @@ export class TodoComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  addTask = function (): void {
+    console.log(this.newTodoTask);
+    let todo: Todo = { task: this.newTodoTask, completed: false };
+    this.todos.push(todo);
+  }
+
 }
 
-//Han created the HTML but needs to make the TS so it's functional
-
-//1) submit a form to call a function to add new task
-//function addTask{ }
 //need to add new todo to the Todo[] with "completed" as false (todos.completed === false)
 
 //2) clicking X on item calls function to remove task

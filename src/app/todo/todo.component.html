@@ -16,10 +16,13 @@
         <button id="x" type="button">X</button>
       </li>
     </ol>
-    <form>
-      <input id="addtolist" type="text" placeholder="Add to-do" />
-      <button id="add" type="button">Add</button>
-    </form>
+    <input
+      [(ngModel)]="newTodoTask"
+      id="addtolist"
+      type="text"
+      placeholder="Add to-do"
+    />
+    <button (click)="addTask()" id="add" type="button">Add</button>
   </section>
 </main>
 
